@@ -1,0 +1,50 @@
+### Getting list of all of product
+GET http://localhost:3000/products
+
+### Creating a new product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+    "name":"Zeynep Phone 15",
+    "price":15999
+    
+}
+
+### GET a product by id
+GET http://localhost:3000/products/6056d40b41c79b1de04f9624
+
+### Update a product by id
+PATCH  http://localhost:3000/products/6056d40b41c79b1de04f9624
+Content-Type: application/json
+
+{
+    "name":"Mehmet Erdem Phone",
+    "price":1999
+}
+### Delete a product by id
+DELETE  http://localhost:3000/products/6056d40b41c79b1de04f9624
+
+### Request for not valid url. 404 route not found
+GET http://localhost:3000/abc_zyz
+
+### Query String testing
+GET http://localhost:3000/test?name=erdem&price=99
+
+### Route Parameters testing
+GET http://localhost:3000/test/2345678/erdem
+
+### Sending POST request for testing
+POST http://localhost:3000/test
+Content-Type: application/json
+
+{
+    "name":"Samsung S7 Edge",
+    "price":4999
+}
+
+### Sending POST request for testing
+POST http://localhost:3000/test
+Content-Type: application/x-www-form-urlencoded
+
+name=Samsung S7 Edge&price=4999
